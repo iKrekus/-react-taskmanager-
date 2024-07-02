@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Task manager - js</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+  <button id="clrStorage" onclick="localStorage.clear()">clrStorage</button>
+<main class="task-mgr">
+  <h1>Task manager - js</h1>
+  <div class="task-mgr__container container">
+    <div class="task-mgr__tasks-box container">
+      <h2>Tasks</h2>
+      <ul class="task-mgr__list">
+      </ul>
+    </div>
+    <div class="task-mgr__add-task container">
+      <h2>add tasks</h2>
+      <div class="task-mgr__wrap">
+        <!-- <label for="date"></label> -->
+        <input type="date" name="date" id="task-date" class="task-mgr__field task-mgr__field--date">
+        <!-- <label for="temperature"></label> -->
+        <input type="number" name="temperature" id="task-temperature" class="task-mgr__field task-mgr__field--temperature" min="-100" max="100" value="0" maxlength="4">
+      </div>
+      <div class="task-mgr__wrap">
+        <label for="title"></label>
+        <input type="text" name="title" id="task-title" class="task-mgr__field task-mgr__field--title">
+        <label for="description"></label>
+        <input type="text" name="description" id="task-description" class="task-mgr__field task-mgr__field--description">
+      </div>
+      <button type="button" class="btn btn__add" id="btn-add">add</button>
+    </div>
+  </div>
+</main>
+<template id="task-tmpl">
+  <li>
+  <div>
+    <p class="task-date"></p>
+    <p class="task-temperature"></p>
+  </div>
+  <p class="task-title"></p>
+  <p class="task-description"></p>
+  <button type="button" class="btn btn__remove"></button>
+  </li>
+</template>
+<script src='/scripts/app.js' type="module"></script>
+</body>
+</html>
